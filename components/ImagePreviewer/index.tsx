@@ -38,14 +38,50 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
         }
     }
 
+    clickNext() {
+        console.log('click next')
+        let newIndex = this.state.index + 1
+        let maxIndex = this.props.fileList.length - 1
+        if (newIndex >= maxIndex) {
+            newIndex = maxIndex
+        }
+        let newImage = this.props.fileList[newIndex]
+        this.setState({
+            ...this.state,
+            index: newIndex,
+            src: newImage.src,
+            name: newImage.name
+        })
+    }
+
+    clickPrev() {
+        console.log('click prev')
+        let newIndex = this.state.index - 1
+        let minIndex = 0
+        if (newIndex <= minIndex) {
+            newIndex = minIndex
+        }
+        let newImage = this.props.fileList[newIndex]
+        this.setState({
+            ...this.state,
+            index: newIndex,
+            src: newImage.src,
+            name: newImage.name
+        })
+    }
+
     render() {
-        const { src, name, maxWidth, maxHeight } = this.state
+        const { fileList } = this.props
+        const { src, name, index, maxWidth, maxHeight } = this.state
         return (
             <div className='image-previewer-container'>
                 <Row align="middle"
                     style={{ height: '100%' }}>
-                    <Col span={1} style={{ textAlign: 'center', width: 60 }}>
-                        <Button icon="left" type="primary"></Button>
+                    <Col span={1}
+                        style={{ textAlign: 'center', width: 60 }}>
+                        <Button onClick={this.clickPrev.bind(this)}
+                            disabled={index === 0}
+                            icon="left" type="primary"></Button>
                     </Col>
                     <Col span={22}>
                         <ImageCoreWrapper
@@ -54,7 +90,10 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
                             src={src} name={name} />
                     </Col>
                     <Col span={1} style={{ textAlign: 'center', width: 60 }}>
-                        <Button icon="right" type="primary"></Button>
+                        <Button
+                            disabled={index >= fileList.length - 1}
+                            onClick={this.clickNext.bind(this)}
+                            icon="right" type="primary"></Button>
                     </Col>
                 </Row>
             </div>
