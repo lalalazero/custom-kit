@@ -1,6 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import ImagePreviewer from './components/ImagePreviewer'
+import Draggble from './components/Draggable'
+import { Button } from 'zero-ui-react'
+import './App.scss'
+
 const fileList = [
     {
         //   'src': pic1,
@@ -23,4 +27,23 @@ const App = () => <div>
     <ImagePreviewer fileList={fileList} />
 </div>
 
-ReactDOM.render(<App />, document.querySelector('#root'))
+const App2 = () => <div>
+    <div>
+        <Draggble>
+            <span className='drag-span'>drag a span</span>
+        </Draggble>
+    </div>
+    <div>
+        <Draggble>
+            <div className='drag-div'>drag a div</div>
+        </Draggble>
+    </div>
+    <div>
+        <Draggble>
+            <Button type="primary">drag custom button</Button>
+        </Draggble>
+    </div>
+
+</div>
+
+ReactDOM.render(<App2 />, document.querySelector('#root'))
