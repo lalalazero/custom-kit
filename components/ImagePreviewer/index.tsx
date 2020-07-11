@@ -7,15 +7,31 @@ export interface ImagePreviewerProps extends React.HTMLProps<HTMLDivElement> {
     fileList: ImageCoreWrapperProps[]
 }
 
-class ImagePreviewer extends React.Component<ImagePreviewerProps> {
+interface ImagePreviewerState {
+    index: number,
+    currentImage: ImageCoreWrapperProps
+}
+
+class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewerState> {
     static defaultProps = {
         fileList: []
     }
+    state: ImagePreviewerState = {
+        index: 0,
+        currentImage: {
+            src: '',
+            name: ''
+        }
+    }
     constructor(props: ImagePreviewerProps) {
         super(props)
+        if (this.props.fileList.length > 0) {
+            this.state.currentImage = this.props.fileList[0]
+        }
     }
 
     render() {
+        const { currentImage } = this.state
         return (
             <div className='image-previewer-container'>
                 <Row align="middle"
@@ -24,7 +40,7 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps> {
                         <Button icon="left" type="primary"></Button>
                     </Col>
                     <Col span={22}>
-                        <ImageCoreWrapper src="" name="" />
+                        <ImageCoreWrapper src={currentImage.src} name={currentImage.name} />
                     </Col>
                     <Col span={1} style={{ textAlign: 'center' }}>
                         <Button icon="right" type="primary"></Button>
