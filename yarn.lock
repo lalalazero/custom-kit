@@ -4694,6 +4694,11 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dot-snake-camel-case-convertor@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/dot-snake-camel-case-convertor/download/dot-snake-camel-case-convertor-0.0.4.tgz#daac06623d1cf5781e56fcd0a97a87ed892e7a77"
+  integrity sha1-2qwGYj0c9XgeVvzQqXqH7Ykuenc=
+
 dotenv@^8.2.0:
   version "8.2.0"
   resolved "https://registry.npm.taobao.org/dotenv/download/dotenv-8.2.0.tgz?cache=0&sync_timestamp=1588851813594&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdotenv%2Fdownload%2Fdotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
@@ -11042,7 +11047,7 @@ react-docgen@^4.1.1:
     node-dir "^0.1.10"
     recast "^0.17.3"
 
-react-dom@^16.13.1:
+react-dom@^16.13.1, react-dom@^16.8.6:
   version "16.13.1"
   resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha1-wb03MxoEhsB47lTEdAcgmTsuDn8=
@@ -11164,7 +11169,7 @@ react-simple-code-editor@^0.10.0:
   resolved "https://registry.npm.taobao.org/react-simple-code-editor/download/react-simple-code-editor-0.10.0.tgz#73e7ac550a928069715482aeb33ccba36efe2373"
   integrity sha1-c+esVQqSgGlxVIKuszzLo27+I3M=
 
-react@^16.13.1, react@^16.8.0:
+react@^16.13.1, react@^16.8.0, react@^16.8.6:
   version "16.13.1"
   resolved "https://registry.npm.taobao.org/react/download/react-16.13.1.tgz?cache=0&sync_timestamp=1592587674770&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha1-LoGIIvGpdDEiwGPWQQ2FweOv5I4=
@@ -14597,6 +14602,15 @@ yurnalist@^1.1.2:
     semver "^6.3.0"
     strip-ansi "^5.2.0"
     strip-bom "^4.0.0"
+
+zero-ui-react@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.npm.taobao.org/zero-ui-react/download/zero-ui-react-0.0.11.tgz?cache=0&sync_timestamp=1594436784716&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzero-ui-react%2Fdownload%2Fzero-ui-react-0.0.11.tgz#4604230d45c01dabb5ac247d83bbed3dcc25d722"
+  integrity sha1-RgQjDUXAHau1rCR9g7vtPcwl1yI=
+  dependencies:
+    dot-snake-camel-case-convertor "^0.0.4"
+    react "^16.8.6"
+    react-dom "^16.8.6"
 
 zwitch@^1.0.0:
   version "1.0.5"
