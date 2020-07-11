@@ -10,5 +10,12 @@
     }
     &-core-wrapper {
         // outline: 1px solid blue;
+        background-color: #ccc;
+        text-align: center;
+    }
+    &-operation-bar {
+        // border: 1px solid lightblue;
+        padding: 5px 0;
+        text-align: center;
     }
 }

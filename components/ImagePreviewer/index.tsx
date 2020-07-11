@@ -15,7 +15,8 @@ interface ImagePreviewerState {
     src: string,
     name: string,
     maxWidth: number,
-    maxHeight: number
+    maxHeight: number,
+    mode: 'adjust' | 'origin'
 }
 
 class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewerState> {
@@ -28,6 +29,7 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
         maxHeight: window.innerHeight - 80,
         src: '',
         name: '',
+        mode: 'adjust'
     }
     constructor(props: ImagePreviewerProps) {
         super(props)
@@ -69,10 +71,25 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
             name: newImage.name
         })
     }
+    clickOrigin() {
+        this.setState(prevState => {
+            if (prevState.mode == 'adjust') {
+                return {
+                    ...prevState,
+                    mode: 'origin'
+                }
+            } else {
+                return {
+                    ...prevState,
+                    mode: 'adjust'
+                }
+            }
+        })
+    }
 
     render() {
         const { fileList } = this.props
-        const { src, name, index, maxWidth, maxHeight } = this.state
+        const { src, name, index, maxWidth, maxHeight, mode } = this.state
         return (
             <div className='image-previewer-container'>
                 <Row align="middle"
@@ -87,7 +104,14 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
                         <ImageCoreWrapper
                             maxWidth={maxWidth}
                             maxHeight={maxHeight}
-                            src={src} name={name} />
+                            src={src} name={name}
+                            mode={mode}
+                        />
+                        <div className='image-previewer-operation-bar'>
+                            <Button
+                                type={mode === 'adjust' ? 'normal' : 'primary'}
+                                onClick={this.clickOrigin.bind(this)}>1:1</Button>
+                        </div>
                     </Col>
                     <Col span={1} style={{ textAlign: 'center', width: 60 }}>
                         <Button
