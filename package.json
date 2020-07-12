@@ -1,10 +1,13 @@
 {
   "name": "custom-kit",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "dist/index",
   "repository": "https://github.com/lalalazero/custom-kit.git",
   "author": "lalalazero <zzzero520@hotmail.com>",
   "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js"

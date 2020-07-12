@@ -4,7 +4,7 @@ module.exports = {
         index: './index.tsx'
     },
     output: {
-        path: path.resolve(__dirname, 'dist/components'),
+        path: path.resolve(__dirname, 'dist'),
         library: 'custom-kit',
         libraryTarget: 'umd',
     },

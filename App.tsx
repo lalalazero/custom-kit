@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ImagePreviewer from './components/ImagePreviewer'
-import Draggble from './components/Draggable'
+import { ImagePreviewer, Draggable } from './index'
 import { Button } from 'zero-ui-react'
 import './App.scss'
 
@@ -29,19 +28,19 @@ const App = () => <div>
 
 const App2 = () => <div>
     <div>
-        <Draggble>
+        <Draggable>
             <span className='drag-span'>drag a span</span>
-        </Draggble>
+        </Draggable>
     </div>
     <div>
-        <Draggble>
+        <Draggable>
             <div className='drag-div'>drag a div</div>
-        </Draggble>
+        </Draggable>
     </div>
     <div>
-        <Draggble>
+        <Draggable>
             <Button type="primary">drag custom button</Button>
-        </Draggble>
+        </Draggable>
     </div>
 
 </div>
