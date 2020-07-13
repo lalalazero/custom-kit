@@ -9,6 +9,8 @@
       "es6",
       "dom"
     ],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "jsx": "react",
     "moduleResolution": "node",

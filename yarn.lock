@@ -1516,6 +1516,14 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/react@^16.9.43":
+  version "16.9.43"
+  resolved "https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.43.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.43.tgz#c287f23f6189666ee3bebc2eb8d0f84bcb6cdb6b"
+  integrity sha1-wofyP2GJZm7jvrwuuND4S8ts22s=
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
 "@types/rimraf@^2.0.2":
   version "2.0.4"
   resolved "https://registry.npm.taobao.org/@types/rimraf/download/@types/rimraf-2.0.4.tgz#403887b0b53c6100a6c35d2ab24f6ccc042fec46"
@@ -14603,10 +14611,10 @@ yurnalist@^1.1.2:
     strip-ansi "^5.2.0"
     strip-bom "^4.0.0"
 
-zero-ui-react@0.0.11:
-  version "0.0.11"
-  resolved "https://registry.npm.taobao.org/zero-ui-react/download/zero-ui-react-0.0.11.tgz?cache=0&sync_timestamp=1594436784716&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzero-ui-react%2Fdownload%2Fzero-ui-react-0.0.11.tgz#4604230d45c01dabb5ac247d83bbed3dcc25d722"
-  integrity sha1-RgQjDUXAHau1rCR9g7vtPcwl1yI=
+zero-ui-react@0.0.14:
+  version "0.0.14"
+  resolved "https://registry.npm.taobao.org/zero-ui-react/download/zero-ui-react-0.0.14.tgz?cache=0&sync_timestamp=1594647243849&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzero-ui-react%2Fdownload%2Fzero-ui-react-0.0.14.tgz#d23ab42b700ab42e18719fed1a4d2b84908ef0a1"
+  integrity sha1-0jq0K3AKtC4YcZ/tGk0rhJCO8KE=
   dependencies:
     dot-snake-camel-case-convertor "^0.0.4"
     react "^16.8.6"

@@ -1,6 +1,8 @@
 import React, { createRef } from 'react'
 import ImageCoreWrapper, { ImageCoreWrapperProps } from './CoreWrapper'
 import { Button, Row, Col } from 'zero-ui-react'
+import 'zero-ui-react/dist/components/index.css'
+
 import './index.scss'
 
 export interface ImagePreviewerProps extends React.HTMLProps<HTMLDivElement> {
@@ -124,6 +126,9 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
                             <Button
                                 type={mode === 'adjust' ? 'normal' : 'primary'}
                                 onClick={this.clickOrigin.bind(this)}>1:1</Button>
+                            <Button icon="zoom-in">
+                            </Button>
+                            <Button icon="zoom-out"></Button>
                             <Button
                                 disabled={index >= fileList.length - 1}
                                 onClick={this.clickNext.bind(this)}
