@@ -17,5 +17,8 @@
         // border: 1px solid lightblue;
         padding: 5px 0;
         text-align: center;
+        & > .zeroUI-button {
+            margin: 10px;
+        }
     }
 }

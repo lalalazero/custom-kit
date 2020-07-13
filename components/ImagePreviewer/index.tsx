@@ -41,7 +41,6 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
     }
 
     clickNext() {
-        console.log('click next')
         let newIndex = this.state.index + 1
         let maxIndex = this.props.fileList.length - 1
         if (newIndex >= maxIndex) {
@@ -57,7 +56,6 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
     }
 
     clickPrev() {
-        console.log('click prev')
         let newIndex = this.state.index - 1
         let minIndex = 0
         if (newIndex <= minIndex) {
@@ -94,31 +92,32 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
             <div className='image-previewer-container'>
                 <Row align="middle"
                     style={{ height: '100%' }}>
-                    <Col span={1}
-                        style={{ textAlign: 'center', width: 60 }}>
-                        <Button onClick={this.clickPrev.bind(this)}
-                            disabled={index === 0}
-                            icon="left" type="primary"></Button>
-                    </Col>
-                    <Col span={22}>
+
+                    <Col span={24}>
                         <ImageCoreWrapper
                             maxWidth={maxWidth}
                             maxHeight={maxHeight}
                             src={src} name={name}
                             mode={mode}
                         />
+
+                    </Col>
+                    <Col span={24}>
                         <div className='image-previewer-operation-bar'>
+                            <Button onClick={this.clickPrev.bind(this)}
+                                disabled={index === 0}
+                                icon="left" type="primary"></Button>
+                            <Button
+                                disabled={index >= fileList.length - 1}
+                                onClick={this.clickNext.bind(this)}
+                                icon="right" type="primary"></Button>
                             <Button
                                 type={mode === 'adjust' ? 'normal' : 'primary'}
                                 onClick={this.clickOrigin.bind(this)}>1:1</Button>
                         </div>
+
                     </Col>
-                    <Col span={1} style={{ textAlign: 'center', width: 60 }}>
-                        <Button
-                            disabled={index >= fileList.length - 1}
-                            onClick={this.clickNext.bind(this)}
-                            icon="right" type="primary"></Button>
-                    </Col>
+
                 </Row>
             </div>
         )

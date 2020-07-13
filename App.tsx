@@ -45,4 +45,4 @@ const App2 = () => <div>
 
 </div>
 
-ReactDOM.render(<App2 />, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'))
