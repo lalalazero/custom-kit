@@ -1,24 +1,30 @@
 .image-previewer {
-    &-container {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        // outline: 1px solid;
-        
-    }
-    &-core-wrapper {
-        // outline: 1px solid blue;
-        background-color: #ccc;
-        text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    outline: 1px solid;
+    padding: 20px;
+    &-view-row {
+        border: 1px solid red;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
     }
     &-operation-bar {
-        // border: 1px solid lightblue;
+        border: 1px solid lightblue;
         padding: 5px 0;
         text-align: center;
         & > .zeroUI-button {
             margin: 10px;
         }
     }
+    &-core-wrapper {
+        outline: 1px solid blue;
+        // background-color: #ccc;
+        text-align: center;
+    }
+    
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import ImageCoreWrapper, { ImageCoreWrapperProps } from './CoreWrapper'
 import { Button, Row, Col } from 'zero-ui-react'
 import './index.scss'
@@ -16,7 +16,7 @@ interface ImagePreviewerState {
     name: string,
     maxWidth: number,
     maxHeight: number,
-    mode: 'adjust' | 'origin'
+    mode: 'adjust' | 'origin',
 }
 
 class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewerState> {
@@ -31,12 +31,23 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
         name: '',
         mode: 'adjust'
     }
+    rowRef = createRef<HTMLDivElement>()
     constructor(props: ImagePreviewerProps) {
         super(props)
         if (this.props.fileList.length > 0) {
             const currentImage = this.props.fileList[0]
             this.state.src = currentImage.src
             this.state.name = currentImage.name
+        }
+    }
+
+    componentDidMount() {
+        if (this.rowRef && this.rowRef.current) {
+            const { width, height } = this.rowRef.current.getBoundingClientRect()
+            this.setState({
+                maxHeight: height,
+                maxWidth: width
+            })
         }
     }
 
@@ -89,35 +100,37 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
         const { fileList } = this.props
         const { src, name, index, maxWidth, maxHeight, mode } = this.state
         return (
-            <div className='image-previewer-container'>
-                <Row align="middle"
-                    style={{ height: '100%' }}>
+            <div className='image-previewer'>
+                <div ref={this.rowRef}>
+                    <Row align="middle"
+                        className='image-previewer-view-row'>
+                        <Col span={24}>
+                            <ImageCoreWrapper
+                                maxWidth={maxWidth}
+                                maxHeight={maxHeight}
+                                src={src} name={name}
+                                mode={mode}
+                            />
+                        </Col>
+                    </Row>
+                </div>
 
-                    <Col span={24}>
-                        <ImageCoreWrapper
-                            maxWidth={maxWidth}
-                            maxHeight={maxHeight}
-                            src={src} name={name}
-                            mode={mode}
-                        />
-
-                    </Col>
+                <Row>
                     <Col span={24}>
                         <div className='image-previewer-operation-bar'>
                             <Button onClick={this.clickPrev.bind(this)}
                                 disabled={index === 0}
                                 icon="left" type="primary"></Button>
                             <Button
+                                type={mode === 'adjust' ? 'normal' : 'primary'}
+                                onClick={this.clickOrigin.bind(this)}>1:1</Button>
+                            <Button
                                 disabled={index >= fileList.length - 1}
                                 onClick={this.clickNext.bind(this)}
                                 icon="right" type="primary"></Button>
-                            <Button
-                                type={mode === 'adjust' ? 'normal' : 'primary'}
-                                onClick={this.clickOrigin.bind(this)}>1:1</Button>
+
                         </div>
-
                     </Col>
-
                 </Row>
             </div>
         )
