@@ -12,8 +12,9 @@ const fileList = [
     },
     {
         //   'src': pic2,
-        'src': 'https://infeng.github.io/react-viewer/bbbc41dac417d9fb4b275223a6a6d3e8.jpg',
-        'name': '青海湖.jpg'
+        src: 'http://b.zol-img.com.cn/desk/bizhi/image/5/1440x900/1403749408779.jpg',
+        // 'src': 'https://infeng.github.io/react-viewer/bbbc41dac417d9fb4b275223a6a6d3e8.jpg',
+        'name': '猫咪.jpg'
     },
     {
         //   'src': pic3,

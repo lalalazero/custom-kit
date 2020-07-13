@@ -1,4 +1,5 @@
 import React, { createRef } from 'react'
+import Draggable from '../../Draggable'
 
 export interface ImageCoreWrapperProps {
     src: string,
@@ -60,24 +61,30 @@ class ImageCoreWrapper extends React.Component<ImageCoreWrapperProps, State> {
     renderAdjustImage = () => {
         const { src, name, maxHeight, maxWidth } = this.props
         return (
-            <div
-                className='image-previewer-core-wrapper'
-                ref={this.wrapperRef}
-                style={{ height: maxHeight }}>
-                <img src={src} role="presentation"
-                    onLoad={this.onImageLoad.bind(this)}
-                    style={{ maxHeight: maxHeight, maxWidth: maxWidth }}
-                    ref={this.imgRef}></img>
-            </div>
+            <Draggable>
+                <div
+                    className='image-previewer-core-wrapper'
+                    ref={this.wrapperRef}
+                    style={{ height: maxHeight, width: maxWidth, overflow: 'hidden' }}>
+                    <img src={src} role="presentation"
+                        onLoad={this.onImageLoad.bind(this)}
+                        style={{ maxHeight: maxHeight, maxWidth: maxWidth }}
+                        ref={this.imgRef}></img>
+                </div>
+            </Draggable>
+
         )
     }
     renderOriginImage() {
-        const { src, maxHeight } = this.props
+        const { src, maxHeight, maxWidth } = this.props
         return (
-            <div className='image-previewer-core-wrapper' ref={this.wrapperRef}
-                style={{ height: maxHeight, overflow: 'scroll' }}>
-                <img src={src} role="presentation"></img>
-            </div>
+            <Draggable>
+                <div className='image-previewer-core-wrapper' ref={this.wrapperRef}
+                    style={{ height: maxHeight, width: maxWidth, overflow: 'hidden' }}>
+                    <img src={src} role="presentation"></img>
+                </div>
+            </Draggable>
+
         )
     }
     render() {

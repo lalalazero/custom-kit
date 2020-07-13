@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     top: 0;
-    outline: 1px solid;
+    border: 10px solid pink;
     padding: 20px;
     &-view-row {
         border: 1px solid red;
@@ -16,15 +16,21 @@
     &-operation-bar {
         border: 1px solid lightblue;
         padding: 5px 0;
+        width: 90%;
+        margin: 0 auto;
         text-align: center;
         & > .zeroUI-button {
-            margin: 10px;
+            margin: 0 10px;
         }
     }
     &-core-wrapper {
-        outline: 1px solid blue;
+        // outline: 1px solid blue;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         // background-color: #ccc;
-        text-align: center;
+        // text-align: center;
     }
     
 }
