@@ -129,10 +129,14 @@ class ImagePreviewer extends React.Component<ImagePreviewerProps, ImagePreviewer
                             <Button icon="zoom-in">
                             </Button>
                             <Button icon="zoom-out"></Button>
+                            <Button icon="rotate-left"></Button>
+                            <Button icon="rotate-right"></Button>
+                            <Button icon="download"></Button>
                             <Button
                                 disabled={index >= fileList.length - 1}
                                 onClick={this.clickNext.bind(this)}
                                 icon="right" type="primary"></Button>
+
 
                         </div>
                     </Col>

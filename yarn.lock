@@ -14611,10 +14611,10 @@ yurnalist@^1.1.2:
     strip-ansi "^5.2.0"
     strip-bom "^4.0.0"
 
-zero-ui-react@0.0.14:
-  version "0.0.14"
-  resolved "https://registry.npm.taobao.org/zero-ui-react/download/zero-ui-react-0.0.14.tgz?cache=0&sync_timestamp=1594647243849&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzero-ui-react%2Fdownload%2Fzero-ui-react-0.0.14.tgz#d23ab42b700ab42e18719fed1a4d2b84908ef0a1"
-  integrity sha1-0jq0K3AKtC4YcZ/tGk0rhJCO8KE=
+zero-ui-react@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.npm.taobao.org/zero-ui-react/download/zero-ui-react-0.0.15.tgz#3e8eeb31045108b81c6f48617474803d7523957d"
+  integrity sha1-Po7rMQRRCLgcb0hhdHSAPXUjlX0=
   dependencies:
     dot-snake-camel-case-convertor "^0.0.4"
     react "^16.8.6"
