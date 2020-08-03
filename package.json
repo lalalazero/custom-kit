@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "doc:dev": "doc-it dev"
   },
   "dependencies": {},
   "devDependencies": {
