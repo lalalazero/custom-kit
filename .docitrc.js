@@ -4,20 +4,23 @@ module.exports = {
     publicPath: '/custom-kit/',
     outputDir: 'dist',
     demoDir: 'demos',
+    customHeader: './demos/CustomHeader',
+    customFooter: './demos/CustomFooter',
     routes: [
         {
             demo: 'ImageViewerDemo',
             code: 'ImageViewerDemoCode',
             title: 'ImageViewer',
             desc: 'ImageViewer的描述描述描述',
-            path: '/imageviewer'
+            path: '/imageviewer',
         },
         {
             demo: 'DraggableDemo',
             code: 'DraggableDemoCode',
             title: 'Draggable',
             desc: 'ImageViewer的描述描述描述',
-            path: '/draggable'
+            path: '/draggable',
+            
         },
         {
             demo: 'WatermarkDemo',
