@@ -1,0 +1,29 @@
+.custom-kit-watermark {
+    &-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+    &-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+    &-item {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+        position: absolute;
+        overflow: hidden;
+        z-index: 99999;
+        opacity: 0.3;
+        font-size: 14px;
+        font-family: 微软雅黑;
+        color: #000;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        pointer-events: none;
+    }
+}
