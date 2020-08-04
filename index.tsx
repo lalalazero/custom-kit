@@ -1,1 +1,2 @@
 export { default as ImageViewer } from './components/ImageViewer'
+export { default as Draggable } from './components/Draggable'

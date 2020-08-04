@@ -10,6 +10,13 @@ module.exports = {
             title: 'ImageViewer',
             desc: 'ImageViewer的描述描述描述',
             path: '/imageviewer'
+        },
+        {
+            demo: 'DraggableDemo',
+            code: 'DraggableDemoCode',
+            title: 'Draggable',
+            desc: 'ImageViewer的描述描述描述',
+            path: '/draggable'
         }
 
     ]

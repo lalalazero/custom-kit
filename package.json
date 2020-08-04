@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "doc:dev": "doc-it dev"
+    "doc:dev": "doc-it dev",
+    "doc:build": "doc-it build"
   },
   "dependencies": {},
   "devDependencies": {
