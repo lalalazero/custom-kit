@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Draggable } from '../index'
+import { Draggable } from '../../index'
 import { Button } from 'zero-ui-react'
 
 const Demo = <Draggable >
