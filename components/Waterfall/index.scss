@@ -1,9 +1,8 @@
 .custom-kit-waterfall {
     &-wrapper {
         border: 1px solid red;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-flow: column dense;
-        grid-template-rows: 1fr 1fr 1fr;
+        display: block;
+        column-count: 2;
+        column-fill: auto;
     }
 }

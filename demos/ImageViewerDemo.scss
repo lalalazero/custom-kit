@@ -1,24 +1,29 @@
+
 .item-1 {
     background-color: pink;
     height: 400px;
-    // width: 300px;
-    display: inline-flex;
+    
 }
 .item-2 {
     background-color: plum;
     height: 500px;
-    // width: 300px;
-    display: inline-flex;
+    
 }
 .item-3 {
     background-color: purple;
     height: 500px;
-    // width: 300px;
-    display: inline-flex;
+    
 }
 .item-4 {
     background-color: rosybrown;
     height: 300px;
-    // width: 300px;
-    display: inline-flex;
+    
+}
+
+.item {
+    word-break: break-word;
+    margin-bottom: 40px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
 }
