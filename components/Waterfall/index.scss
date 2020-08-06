@@ -1,8 +1,13 @@
 .custom-kit-waterfall {
     &-wrapper {
-        border: 1px solid red;
         display: block;
-        column-count: 2;
         column-fill: auto;
+    }
+    &-item {
+        border: 1px solid #ccc;
+        word-break: break-word;
+        -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        column-break-inside: avoid;
     }
 }
