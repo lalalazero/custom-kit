@@ -1,0 +1,63 @@
+---
+Demo1: ./Demo1.jsx
+Demo2: ./Demo2.jsx
+---
+
+## 基本用法
+
+瀑布流布局展示
+
+<Demo1 span={4} />
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Waterfall } from 'custom-kit'
+
+const Demo = <Waterfall>
+    <div className='item-1 item'>1</div>
+    <div className="item-2 item">2</div>
+    <div className='item-3 item'>3</div>
+    <div className="item-4 item">4</div>
+    <div className='item-1 item'>5</div>
+    <div className="item-2 item">6</div>
+</Waterfall>
+
+ReactDOM.render(<Demo1 />, document.querySelector('#root')) 
+
+```
+
+## 横向展示
+
+创建一个横向瀑布流
+
+<Demo2 span={12} />
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Waterfall } from 'custom-kit'
+
+const Demo = <Waterfall>
+    <p>横向瀑布流</p>
+    <div className='item-1 item'>1</div>
+    <div className="item-2 item">2</div>
+    <div className='item-3 item'>3</div>
+    <div className="item-4 item">4</div>
+    <div className='item-1 item'>5</div>
+    <div className="item-2 item">6</div>
+</Waterfall>
+
+ReactDOM.render(<Demo />, document.querySelector('#root')) 
+
+```
+
+
+## API
+
+通过设置 `Button` 的属性来产生不同的按钮样式，按钮的属性如下：
+
+| 属性      | 说明    | 类型      | 可选值       | 默认值   | 是否必填 |
+|---------- |-------- |---------- |-------------  |-------- | ---- |
+| type | 按钮类型，不同类型样式不同 | string | normal / primary / dashed / text / danger | normal | -- |
+| icon | 按钮图标名字 | string | 参考内置图标 | -- | -- |

@@ -1,0 +1,29 @@
+
+.item-1 {
+    background-color: pink;
+    height: 400px;
+    
+}
+.item-2 {
+    background-color: plum;
+    height: 500px;
+    
+}
+.item-3 {
+    background-color: purple;
+    height: 500px;
+    
+}
+.item-4 {
+    background-color: rosybrown;
+    height: 300px;
+    
+}
+
+.item {
+    word-break: break-word;
+    margin-bottom: 40px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+}

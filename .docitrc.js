@@ -51,6 +51,11 @@ module.exports = {
                     desc: 'watermark desc',
                 }
             ]
+        },
+        {
+            path: '/waterfall',
+            menu: 'Waterfall',
+            mdx: './demos/waterfall/index.mdx'
         }
 
     ]
